@@ -41,7 +41,7 @@ key|加密|string|二次验证加密方式MD5(uid + order_no + total_amount + au
 >## 响应返回
 
 
-响应字符串 ``Success``停止回调
+响应字符串 ``success``停止回调
 
 
 
