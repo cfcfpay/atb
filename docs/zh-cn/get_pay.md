@@ -15,9 +15,9 @@ auth_code|授权码|string|必填|您的识别码，注册后在“接口参数�
 money|金额|double/float|必填|发起付款的金额，单位：元，精确到小数点后两位。
 channel|支付类型|string|必填|通道名称，当前支持参数有 聚合码-nsm  当面付-ftf 转到银行卡-atb。
 notify_url|支付回调地址|string|必填|用户支付成功后，会POST这个地址，由商户自己定义。
-return_url|跳转地址|string|必填|用户支付成功后，我们会让用户浏览器自动跳转到这个网址。由您自定义不可加参数。
+return_url|跳转地址|string|选填|用户支付成功后，我们会让用户浏览器自动跳转到这个网址。由您自定义不可加参数。
 order_id|订单号|string|必填|订单号，由您自定义，要求唯一性，不可重复。
-remark|备注|string|选填|备注
+remark|备注|string|必填|备注,建议传用户ID,方便查询用户是否重复下单
 key|加密字符串|string|必填|"格式为 MD5(uid + auth_code + money + notify_url + order_id)
 
 >## 响应参数 
