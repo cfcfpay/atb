@@ -33,15 +33,15 @@ remark|备注|string|备注
 ```json
 {
     "msg": "查询成功",
-    "real_money": 1,
-    "order_money"：1,
+    "real_money": 200,
+    "order_money"：200,
     "usr_msg": "测试20190319",
     "add_time": "2019-03-20 17:11:04",
     "pay_status": 1,
     "order_no": "20190320171103327296265",
     "order_id": "201902231113111111",
     "pay_time": "2019-03-20 17:11:13",
-    "channel":"nsm",
+    "channel":"pdd",
     "remark":"测试"
 }
 ```
