@@ -32,11 +32,11 @@ key|加密|string|二次验证加密方式MD5(uid + order_no + order_money + aut
     "pay_status": 1,
     "add_time": "2019-06-20 17:11:04",
     "pay_time": "2019-06-20 17:11:13",
-    "order_money": 1.00,
-    "real_money": 1.00,
+    "order_money": 200,
+    "real_money": 200,
     "order_id": "201902231113111111",
     "order_no": "20190320171103327296265",
-    "channel":"atb",
+    "channel":"pdd",
     "remark": "测试20190319"
 }
 ```
