@@ -11,14 +11,15 @@
 参数名称|含义|类型|必填/选填|说明
 :--:|:--:|:--:|:--:|:--:
 uid|用户UID|string|必填|您的唯一标识，注册后在“基本配置”页面里获得，一个32位字符串。
-auth_code|授权码|string|必填|您的识别码，注册后在“接口参数配置”页面里获得。用于鉴别接口访问者。
 money|金额|string|必填|发起付款的金额，单位：元，精确到小数点后两位。
-channel|支付类型|string|必填|通道名称，当前支持参数 ocpay -【支付宝扫码】。
+channel|支付类型|string|必填|通道名称，当前支持参数 cfpay -【支付宝扫码】。
 notify_url|支付回调地址|string|必填|用户支付成功后，会POST这个地址，由商户自己定义。
 return_url|跳转地址|string|选填|用户支付成功后，我们会让用户浏览器自动跳转到这个网址。由您自定义不可加参数。
 order_id|订单号|string|必填|订单号，由您自定义，要求唯一性，不可重复。
 remark|备注|string|必填|备注,建议传用户ID,方便查询用户是否重复下单
 key|加密字符串|string|必填|"格式为 MD5(uid + auth_code + money + notify_url + order_id)
+
+``auth_code``请跟客服索取,或者登陆后台查看。
 
 >## 响应参数 
 
@@ -40,13 +41,12 @@ remark|备注|string|传入的备注
 ```json
 {
     "msg": "创建成功",
-    "code": 200,
     "order_money": 200.00,
     "real_money": 200.00,
     "order_no": "20190320161805375396336",
     "order_id": "201902231113111111",
     "add_time": "2019-06-20 16:18:05",
-    "channel": "ocpay",
+    "channel": "cfpay",
     "pay_url": "https://www.bfpay.cc/pay/20190320161805375396336",
     "remark":"ceshi"
 }
